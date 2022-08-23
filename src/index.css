@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bottomNav a:hover{
+  color: #413B89;
+}
+.active{
+  color: #413B89;
+}
+.active::after{
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #413B89;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+@media screen and (max-width: 624px){
+  .active::after{
+  top: 50%;
+}
+}
